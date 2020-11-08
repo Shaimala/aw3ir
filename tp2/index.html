@@ -9,10 +9,13 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
+        <link rel ="stylesheet"   href="style.css"  >
+        
+        <script type="text/javascript" src="formulaire.js"></script>
 
         <style>
           body{
-              background-color: #e9ebee;              
+              background-color: rgba(255,150,100, 0.1);              
               font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
               font-size: 16px;
               margin: 0 auto;
@@ -29,5 +32,28 @@
         <!-- Add your site or application content here -->
         <p>Hello world! This is HTML5 Boilerplate.</p>
         <img src="../galilee.png" alt="Logo Galilee"/>
+        <h1> Saisi d'un  formulaire </h1>
+        <form id="formulaire "  onsubmit="validation()">
+            <label for="nom"> Nom</label>
+            <input id=nom name="nom" type="text" minlength="5" maxlength="20" class="formAW"> <br><br>
+            
+               <label for="prenom">Prenom</label>
+                <input id=prenom name="prenom" type="text" minlength="5" maxlength="20" class="formAW" > <br><br>
+            
+               <label for="naissance"> Date de naissance</label>
+                <input id=naisssance type="Date" placeholder="JJ/MM/AAAA" class="formAW"> <br><br>
+                
+                <label for="Adresse">Adresse Postale</label>
+                <input id="Adresse" name ="Adresse" type="text"   minlength="5" maxlength="50" class="formAW" > <br><br>
+            
+                 <label for="mail">Email</label>
+                <input id="mail"  name ="mail" type="email"   minlength="5" maxlength="50" class="formAW" > <br><br>
+               
+                <input type="button" value="valider" onclick="validation()" >
+        
+         </form>
+        
+        <div id="error">   </div>
+         <div id="resultat"> </div>
     </body>
 </html>
