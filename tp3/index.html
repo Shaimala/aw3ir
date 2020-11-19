@@ -3,20 +3,45 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP4</title>
+        <title>TP3</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
+         <!-- jquery pour pouvoir utiliser les composants JS de boostap (modal, tooltip...) -->
+<script src="js/jquery-3.2.1.slim.min.js"></script>
 
+<!-- CSS boostrap -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<script src="js/popper.min.js"></script>
+
+<!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
+<script src="js/bootstrap.min.js"></script>
+
+         <!-- composants JS pour validation du formulaire -->
+         <script src="js/form-query-validation.js"></script>
         <style>
           body{
               background-color: #e9ebee;              
               font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
               font-size: 16px;
               margin: 0 auto;
-              max-width: 800px;              
+              max-width: 800px; 
+              height: 100%;
+  /* The image used */
+  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+
+  /* Half height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
           }
         </style>
         
@@ -24,10 +49,71 @@
         <!--<link rel="stylesheet" href="style.css">-->
         <!--<script src="main.js"></script>-->
     </head>
-    <body>        
-        <h1>TP4</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+    <body>    
+       
+      <form class="form-control-sm was-validated">
+        <div class="form-group">
+          <label for="prenom">Prenom:</label>
+          <input type="text" class="form-control" id="prenom" placeholder="prenom" name="prenon" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">veuillez remplir ce champ svp.</div>
+        </div>
+         <div class="form-group">
+          <label for="nom">Nom:</label>
+          <input type="text" class="form-control" id="nom" placeholder="nom" name="nom" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">veuillez remplir ce champ svp.</div>
+        </div>
+        <div class="form-group">
+          <label for="date">Date de naissance:</label>
+          <input type="date" class="form-control" id="date" placeholder="jj/MM/aaaa" name="date" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">veuillez rempllir ce champ svp.</div>
+        </div>
+         <div class="form-group">
+          <label for="Adresse">Adresse:</label>
+          <input type="text" class="form-control" id="Adresse" placeholder="ex=Paris" name="Adresse" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">veuillez rempllir ce champ svp.</div>
+        </div>
+         <div class="form-group">
+          <label for="mail">Email:</label>
+          <input type="email" class="form-control" id="mail" placeholder="aaa@" name="mail" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">veuillez rempllir ce champ svp.</div>
+        </div>
+               
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="remember" required>veuillez cochez sur la case accord.
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">veuillez cochez sur accord .</div>
+          </label>
+        </div>        
+            
+        <input type="button" value="Valider" id="valider" class="btn btn-primary">
+                </form>
+
+                <div class="modal" tabindex="-1" role="dialog" id="myModal">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          
+      
+                          <h5 class="modal-title">Modal title</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p>Corps de la modal à modifier après validation du formulaire</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
     </body>
 </html>
