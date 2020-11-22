@@ -12,8 +12,16 @@
          <!-- jquery pour pouvoir utiliser les composants JS de boostap (modal, tooltip...) -->
 <script src="js/jquery-3.2.1.slim.min.js"></script>
 
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
 <!-- CSS boostrap -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+
+<link href ='https://fonts.googleapis.com/css?family=Crete+Round' rel="stylesheet">
 
 <script src="js/popper.min.js"></script>
 
@@ -22,6 +30,8 @@
 
          <!-- composants JS pour validation du formulaire -->
          <script src="js/form-query-validation.js"></script>
+         
+      
         <style>
           body{
               background-color: #e9ebee;              
@@ -31,7 +41,7 @@
               max-width: 800px; 
               height: 100%;
   /* The image used */
-  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+  background-image: url("fond.png");
 
   /* Half height */
   height: 50%;
@@ -44,56 +54,95 @@
 
           }
         </style>
+      <style>
+          h1{
+            text-align:center ;
+            width :940px ;
+            margin: 0 , auto ;
+            padding : 2px ;
+            text-transform: uppercase;
+            font-family :'crete Round', sans-serif ;
+            font-size: 45px ;
+            color: #f0f0f0; ;
+            }
+            
+          
+
+      </style>
         
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
         <!--<link rel="stylesheet" href="style.css">-->
         <!--<script src="main.js"></script>-->
     </head>
     <body>    
-       
-      <form class="form-control-sm was-validated">
-        <div class="form-group">
-          <label for="prenom">Prenom:</label>
-          <input type="text" class="form-control" id="prenom" placeholder="prenom" name="prenon" required>
-          <div class="valid-feedback">Valid.</div>
-          <div class="invalid-feedback">veuillez remplir ce champ svp.</div>
-        </div>
-         <div class="form-group">
-          <label for="nom">Nom:</label>
-          <input type="text" class="form-control" id="nom" placeholder="nom" name="nom" required>
-          <div class="valid-feedback">Valid.</div>
-          <div class="invalid-feedback">veuillez remplir ce champ svp.</div>
-        </div>
-        <div class="form-group">
-          <label for="date">Date de naissance:</label>
-          <input type="date" class="form-control" id="date" placeholder="jj/MM/aaaa" name="date" required>
-          <div class="valid-feedback">Valid.</div>
-          <div class="invalid-feedback">veuillez rempllir ce champ svp.</div>
-        </div>
-         <div class="form-group">
-          <label for="Adresse">Adresse:</label>
-          <input type="text" class="form-control" id="Adresse" placeholder="ex=Paris" name="Adresse" required>
-          <div class="valid-feedback">Valid.</div>
-          <div class="invalid-feedback">veuillez rempllir ce champ svp.</div>
-        </div>
-         <div class="form-group">
-          <label for="mail">Email:</label>
-          <input type="email" class="form-control" id="mail" placeholder="aaa@" name="mail" required>
-          <div class="valid-feedback">Valid.</div>
-          <div class="invalid-feedback">veuillez rempllir ce champ svp.</div>
-        </div>
-               
-        <div class="form-group form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" name="remember" required>veuillez cochez sur la case accord.
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">veuillez cochez sur accord .</div>
-          </label>
-        </div>        
-            
-        <input type="button" value="Valider" id="valider" class="btn btn-primary">
-                </form>
+       <h1 class="font-weight-bold"> formulaire de saisi <span class="text-success">.</span></h1>
+      <form class="was-validated"> 
+        <!--nom-->
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="nom"><span style="font-weight:bold">Nom</span></label>
+            <input type="text" class="form-control " id="nom" placeholder="Nom" required>
+            <div class="invalid-feedback">Veuillez entrer votre nom svp</div>
+            <div class="valid-feedback">  </div>
+          </div>
+          <!--Prenom-->
+          <div class="col-md-4 mb-3">
+            <label for="prenom"><span style="font-weight:bold">Prenom</span></label>
+            <input type="text" class="form-control is-valid" id="prenom" placeholder="prenom"  required>
+            <div class="invalid-feedback">Veuillez entrer votre prenom</div>
+            <div class="valid-feedback"></div>
+          </div>
+          <!--Date de naissance-->
+          <div class="col-md-4 mb-3">
+            <label for="datepicker"><span style="font-weight:bolder"><span style="font-weight:bold">Date de naissance</span></span></label>
+            <div class="input-group">
+              <input type="texT" class="form-control is-valid" id="datepicker" placeholder="date de naissance" required>
+              <div class="invalid-feedback">
+                veuillez entrer votre date de naisssance svp.
+              </div>
+              <div class="valid-feedback"></div>
+            </div>
+          </div>
+          <!-- Adresse-->
+          
+            <div class="col-md-6 mb-3">
+              <label for="adresse"><span style="font-weight:bold">Adresse Postale</span></label>
+              <input type="text" class="form-control is-valid" id="adresse" placeholder="ex=paris" required>
+              <div class="invalid-feedback">
+                Entrer votre adresse svp.
+              </div>
+              <div class="valid-feedback"></div>
+            </div>
+                <!-- Adresse Mail-->
+                <div class="col-md-4 mb-3">
+                  <label for="mail"><span style="font-weight:bold">Adresse Mail</span></label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                    </div>
+                    <input type="email" class="form-control is-valid" id="mail" placeholder="ex=aaa@" aria-describedby="inputGroupPrepend3" required>
+                    <div class="invalid-feedback">
+                     veuillez entrer votre adresse Mail svp.
+                    </div>
+                    <div class="valid-feedback"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-contol  is-valid form-check-input" type="checkbox" value="" id="invalidCheck3" required>
+                  <label class="form-check-label" for="invalidCheck3">
+                    Accepter les termes et conditions
 
+                  </label>
+                  <div class="invalid-feedback">
+                    Vous devez donner votre accord avant de soumettre le formulaire.
+                  </div>
+                </div>
+              </div>
+              <!-- valider-->
+              <input type="button" value="Valider" id="valider" class="btn btn-primary">
+          </form>
                 <div class="modal" tabindex="-1" role="dialog" id="myModal">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
