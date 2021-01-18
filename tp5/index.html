@@ -17,15 +17,28 @@
   <script src="JS/main.js"></script>
   <script src="JS/lib/vue.js"></script>
   <style>
-      
-  </style>
+      body{
+          background-image:url("img/meteo.jpg")
+          
+      }
+     
+            form{
+                background-image:url("img/meteo.jpg") ;
+            }
+            .input-group{
+                     padding-top:10 px ;
+                     }
+            h1{
+                text-align: center ;
+                font-weight:bold ;
+                color:#fff;
+            }
+        </style>
 </head>
 <body>
-    <h1> Bienvenue dans votre fornulaire de saisi des metéo</h1>
+<h1> Bienvenue  sur votre app-meteo</h1>
 
-    <br><br>
-
-  <div id="weatherApp">
+  <div id="weatherApp" class="container-fluid">
     <!-- ici votre code HTML utilisé par VUE -->
     <!-- formulaire de saisie de ville -->
 <form v-on:submit="addCity">
@@ -61,7 +74,7 @@
   
   
 <!-- meteo de la ville selectionnée -->
-<div v-if="cityWeatherLoading"> Chargement de la météo...</div>
+<div v-if="cityWeatherLoading" class="container-fluid"> Chargement de la météo...</div>
 
 <div v-if="cityWeather">
 
@@ -104,7 +117,5 @@
 
   </form>
 </div>
-
-  
-  </body>
+</body>
 </html>
