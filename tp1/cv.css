@@ -5,9 +5,11 @@ section{
 }
 
 .container{
-border:solid black 1px;
+justify-content: center;
+    display: grid;    
 }
 
 table{border:solid black 1px;
+    width:100vh;
 }
 tr{margin 5px;}
