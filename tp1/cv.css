@@ -17,3 +17,5 @@ table{
 }
 tr{margin 5px;}
 tbody{ width:width:90vh;}
+
+thead tr{font-size: 3rem; color:white;}
