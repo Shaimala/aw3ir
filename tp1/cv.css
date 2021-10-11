@@ -1,4 +1,4 @@
-table{
+section{
     
     border-collapse: separate;
     border-spacing: 0;
@@ -19,9 +19,6 @@ td:first-child{
 
 }
 body{
-    background: #E6DADA;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
              
     font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
