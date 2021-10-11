@@ -13,3 +13,4 @@ table{border:solid black 1px;
     width:100vh;
 }
 tr{margin 5px;}
+tbody{border:solid black 1px; width:width:100vh;}
