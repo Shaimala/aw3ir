@@ -1,8 +1,11 @@
+body{background: -webkit-linear-gradient(to bottom, #white, #e9ebee);
+    background: linear-gradient(to bottom, #white, #e9ebee);}
 a{text-decoration:none;
 color: black;}
 section{
     
    border:solid black 1px;
+    border-radius : 
    margin:2px;
 }
 
@@ -15,4 +18,4 @@ table{border:solid black 1px;
     width:100vh;
 }
 tr{margin 5px;}
-tbody{border:solid black 1px; width:width:90vh;}
+tbody{ width:width:90vh;}
