@@ -11,6 +11,9 @@ section{
 justify-content: center;
     display: grid;    
 }
+header{
+display:grid;
+}
 
 table{
     width:100vh;
