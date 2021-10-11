@@ -6,8 +6,6 @@ section{
    margin:2px;
 }
 
-.contact{background-color:grey;}
-
 .container{
 justify-content: center;
     display: grid;    
@@ -16,5 +14,6 @@ justify-content: center;
 table{border:solid black 1px;
     width:100vh;
 }
+.contact thead{background-color:grey;}
 tr{margin 5px;}
 tbody{border:solid black 1px; width:width:90vh;}
