@@ -19,7 +19,14 @@ body{
     grid-row:1/5;
     border-radius: 20px 20% 0px 20px;
 }
-
+.centre-interet thead {
+    font-weight:bold;
+    color:white;
+}
+.competence thead {
+    fnt-weight:bold
+        color:white;
+}
 .right{
     padding: 30px;
     grid-row: 1/5;
