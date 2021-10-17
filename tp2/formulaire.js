@@ -6,7 +6,7 @@ function validation(){
   document.getElementById("error").innerHTML = "";
 
   for(let item of document.querySelectorAll('.inputAW')){
-    if(item.value.length < 4){
+    if(item.value.length < 5){
       
       var label =   document.querySelector("label[for="+item.id+"]").textContent;
       
