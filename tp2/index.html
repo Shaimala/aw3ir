@@ -9,25 +9,61 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
-        
+        <link rel="stylesheet" href="formulaire.css" />
+        <script type="text/javascript" src="formulaire.js"></script>
+       
+        <h1 >Saisie d'une fiche "Personne"</h1>
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
         <!--<link rel="stylesheet" href="style.css">-->
         <!--<script src="js/main.js"></script>-->
     </head>
     <body>        
-        <h1>tp2</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+        
+        <br/>
+        <form id="formAW" onsubmit="validation()" > 
+        <p>
+            <label for="nom" >Nom</label> :
+            <input type="text" name="nom" id="nom" placeholder="Ex : Lakhram" size="30" minlength="5" maxlength="20" class="inputAW"/>
+        </p>
+        <p>
+            <label for="prenom">Prénom</label> :
+            <input type="text" name="prenom" id="prenom" placeholder="Ex : Shaïma" size="30" minlength="5" maxlength="20" class="inputAW" />
+        </p>
+        <p>
+            <label for="date">Date de naissance</label> :
+            <input type="date" name="date" id="date"  class="inputAW"/>
+        </p>
+        <p><label for="sexe">Sexe</label> :
+            <input type="checkbox" name="homme" id="homme">
+            <label for="homme">Homme</label> 
+            <input type="checkbox" name="femme" id="femme">
+            <label for="femme">Femme</label> 
+            <input type="checkbox" name="autre" id="autre">
+            <label for="autre">Autre</label> 
+        </p>
+        <p>
+            <label for="adresse">Adresse</label> :
+            <input type="text" name="adresse" id="adresse" size="30" minlength="5" maxlength="50" class="inputAW" />
+        </p>
+        <p>
+            <label for="mail">Mail</label> :
+            <input type="email" name="mail" id="mail" placeholder="Ex : enxemple@mail.fr" size="30" minlength="5" maxlength="30" class="inputAW"/>
+        </p>
+        
+        <br/>
+         <!--<div class="button">
+            <button type="submit" onclick="validation()">Valider</button>
+        </div>-->
+
+        <input type="button" value="Valider" onclick="validation()">
+        
+    </form>
+    <div id="error">
+        
+    </div>
+    <br/>
+    <div id="resultat">
+
+    </div>
     </body>
 </html>
