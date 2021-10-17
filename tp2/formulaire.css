@@ -11,9 +11,10 @@ form{
   width: 520px;
   /* Encadré pour voir les limites du formulaire */
   padding: 1em;
-  border: 1px solid rgb(199, 91, 91);
+  border: 1px solid rgb(178 110 110 / 22%);
   border-radius: 2em;
   background-color: rgb(223, 182, 170);
+   
 }
 
     
@@ -21,7 +22,7 @@ form{
 label{
       width: 100px;
       display: inline-block;
-    color:blue
+    color:white
 }
   
   #error{
