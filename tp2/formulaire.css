@@ -5,10 +5,18 @@ body{
     margin: 0 auto;
     max-width: 800px;              
 }
-
 form{
-    text-align : none;
+    
+    margin: 0 auto;
+  width: 520px;
+  /* Encadré pour voir les limites du formulaire */
+  padding: 1em;
+  border: 1px solid rgb(199, 91, 91);
+  border-radius: 2em;
+  background-color: rgb(223, 182, 170);
 }
+
+    
   
 label{
       width: 100px;
