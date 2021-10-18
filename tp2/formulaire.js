@@ -53,7 +53,7 @@ function validation() {
     // }
 
     if (item.name == 'mail' && validateEmail(item.value) == false) {
-      document.getElementById("error").innerHTML += `La saisie du Mail est dans le mauvais format<br/>`;
+      document.getElementById("error").innerHTML += `La saisie du Mail est dans le mauvais format.<br/>`;
       document.getElementById("error").classList.add("display");
       document.getElementById("resultat").classList.remove("display")
     }
@@ -61,7 +61,7 @@ function validation() {
   }
 
   if (listItemError.length > 0) {
-    document.getElementById("error").innerHTML += `Ces champs doivent avoir au moins 5 caractères`;
+    document.getElementById("error").innerHTML += `Ces champs doivent avoir au moins 5 caractères:`;
     document.getElementById("error").innerHTML += `<ul>`;
 
     for (let itemError of listItemError) {
