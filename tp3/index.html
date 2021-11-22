@@ -1,69 +1,139 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP2</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" href="formulaire.css" />
-        <script type="text/javascript" src="formulaire.js"></script>
-       <center>
-           <h1 style="color:rgb(223, 182, 170);">Saisie d'une fiche "Personne":</h1> </center>
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="js/main.js"></script>-->
-    </head>
-    <body>        
-        
-        <br/>
-        <form id="formAW" onsubmit="validation()" > 
-        <p>
-            <label for="nom" >Nom</label> :
-            <input type="text" name="nom" id="nom" placeholder="Ex : Lakhram" size="30" minlength="5" maxlength="20" class="inputAW"/>
-        </p>
-        <p>
-            <label for="prenom">Prénom</label> :
-            <input type="text" name="prenom" id="prenom" placeholder="Ex : Shaïma" size="30" minlength="5" maxlength="20" class="inputAW" />
-        </p>
-        <p>
-            <label for="date">Date de naissance</label> :
-            <input type="date" name="date" id="date" placeholer="JJ/MM/AAAA"  class="inputAW"/>
-        </p>
-        <p><label for="sexe">Sexe</label> :
-            <input type="checkbox" name="homme" id="homme">
-            <label for="homme">Homme</label> 
-            <input type="checkbox" name="femme" id="femme">
-            <label for="femme">Femme</label> 
-            <input type="checkbox" name="autre" id="autre">
-            <label for="autre">Autre</label> 
-        </p>
-        <p>
-            <label for="adresse">Adresse</label> :
-            <input type="text" name="adresse" id="adresse" size="30" minlength="5" maxlength="50" class="inputAW" />
-        </p>
-        <p>
-            <label for="mail">Mail</label> :
-            <input type="email" name="mail" id="mail" placeholder="Ex : exemple@mail.fr" size="30" minlength="5" maxlength="30" class="inputAW"/>
-        </p>
-        
-        <br/>
-         <!--<div class="button">
-            <button type="submit" onclick="validation()">Valider</button>
-        </div>-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="formulaire.css">
+    <script src="js/form-validation.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+   
 
-        <input type="button" value="Valider" onclick="validation()">
-        
-    </form>
-    <div id="error">
-        
+    <!-- CSS boostrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
+    <script src="js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1 style="color:rgb(223, 182, 170);">Saisie d'une fiche "Personne":</h1>
+    </center>
+    <div class="container">
+        <form id="formAW">
+            <div class="row">
+
+                <p>
+                    <div class="col">
+                        <label class="form-label" for="nom">Nom</label> :
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" name="nom" id="nom" placeholder="Ex : Lakhram" size="30"
+                            minlength="5" pattern="[a-zA-Z]+" maxlength="20" class="inputAW" />
+                    </div>
+                </p>
+            </div>
+
+            <div class="row">
+
+                <p>
+                    <div class="col">
+
+                        <label class="form-label" for="prenom">Prénom</label> :
+                    </div>
+                    <div class="col">
+
+                        <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Ex : Shaïma"
+                            size="30" minlength="5" maxlength="20" class="inputAW" />
+                    </div>
+
+                </p>
+            </div>
+
+            <div class="row">
+
+                <p>
+                    <div class="col">
+
+                        <label for="date">Date de naissance</label> :
+                    </div>
+                    <div class="col">
+
+                        <input type="date" name="date" id="date" placeholer="JJ/MM/AAAA" class="form-control" />
+                    </div>
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col">
+
+                    <p> <label for="sexe" class="form-label">Sexe</label> :
+                    </p>
+                </div>
+                <div class="col">
+                    <select class="form-control" name="sexe" id="sexe">
+                        <option value="Homme">Homme</option>
+                        <option value="Femme">Femme</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>
+                        <label class="form-label" for="adresse">Adresse</label> :
+                </div>
+
+                <div class="col">
+                    <input type="text" name="adresse" id="adresse" size="30" minlength="5" maxlength="50"
+                        class="form-control" />
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>
+                        <label class="form-label" for="mail">Mail</label> :
+                </div>
+                <div class="col">
+                    <input type="email" name="mail" id="mail" placeholder="Ex : exemple@mail.fr" size="30" minlength="5"
+                        maxlength="30" class="form-control" />
+                    </p>
+                </div>
+            </div>
+            <br />
+            <button type="button" class="btn btn-light" value="envoyer" id="submit">Envoyer</button>
+
+        </form>
+
     </div>
-    <br/>
-    <div id="resultat">
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Informations saisies</h5>
 
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="closeModal()" class="btn btn-secondary"
+                        data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
     </div>
-    </body>
-</html>
+    <script>
+        function closeModal() {
+            $("#myModal").modal("hide")
+
+        }
+    </script>
+</body>
+
+</html
