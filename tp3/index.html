@@ -20,7 +20,7 @@
     <h1 style="color:rgb(223, 182, 170);">Saisie d'une fiche "Personne":</h1>
   </center>
   <div class="container">
-    <form id="formAW">
+    <form id="formAW" name="form">
       <div class="row">
 
         <p>
@@ -28,7 +28,7 @@
             <label class="form-label" for="nom">Nom</label> :
           </div>
           <div class="col">
-            <input type="text" class="form-control" name="nom" id="nom" placeholder="Ex : Lakhram" size="30"
+            <input type="text" class="form-control inputAW" name="nom" id="nom" placeholder="Ex : Lakhram" size="30"
               minlength="5" pattern="[a-zA-Z]+" maxlength="20" class="inputAW" />
           </div>
         </p>
@@ -43,8 +43,8 @@
           </div>
           <div class="col">
 
-            <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Ex : Shaïma" size="30"
-              minlength="5" maxlength="20" class="inputAW" />
+            <input type="text" class="form-control inputAW" name="prenom" id="prenom" placeholder="Ex : Shaïma"
+              size="30" minlength="5" maxlength="20" class="inputAW" />
           </div>
 
         </p>
@@ -58,7 +58,7 @@
           </div>
           <div class="col">
 
-            <input type="date" name="date" id="date" placeholer="JJ/MM/AAAA" class="form-control" />
+            <input type="date" name="date" id="date" placeholer="JJ/MM/AAAA" class="form-control inputAW" />
           </div>
         </p>
       </div>
@@ -84,7 +84,8 @@
             <label class="form-label" for="adresse">Adresse</label> :
         </div>
         <div class="col">
-          <input type="text" name="adresse" id="adresse" size="30" minlength="5" maxlength="50" class="form-control" />
+          <input type="text" name="adresse" id="adresse" size="30" minlength="5" maxlength="50"
+            class="form-control inputAW" />
           </p>
         </div>
       </div>
@@ -95,14 +96,15 @@
         </div>
         <div class="col">
           <input type="email" name="mail" id="mail" placeholder="Ex : exemple@mail.fr" size="30" minlength="5"
-            maxlength="30" class="form-control" />
+            maxlength="30" class="form-control inputAW" />
           </p>
         </div>
       </div>
       <br />
-      <button type="button" class="btn btn-light" value="envoyer" id="submit">Envoyer</button>
+      <input type="submit" class="btn btn-light" value="Envoyer" id="submit">
 
     </form>
+
 
   </div>
   <div class="modal" tabindex="-1" role="dialog" id="myModal">
@@ -113,6 +115,11 @@
 
         </div>
         <div id="modal-body" class="modal-body">
+          <p id="modal-error-msg"></p>
+          <p id="modal-core-msg"></p>
+          <div id="error"></div>
+          <br />
+          <div id="resultat"></div>
         </div>
         <div class="modal-footer">
           <button type="button" id="btn-close" class="btn btn-secondary" data-dismiss="modal">Ok</button>
