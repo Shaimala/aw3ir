@@ -1,0 +1,60 @@
+body{
+    background-color: hsl(220, 43%, 99%);              
+    font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+    font-size: 16px;
+    margin: 0 auto;     
+    height: 100hv;        
+  }
+  form{
+    
+    margin: 0 auto;
+  width: 520px;
+  /* Encadré pour voir les limites du formulaire */
+  padding: 1em;
+  border: 1px solid rgb(178 110 110 / 22%);
+  border-radius: 2em;
+  background-color: rgb(223, 182, 170);
+   
+  }
+  
+    
+  
+  label{
+      width: 100px;
+      display: inline-block;
+    color:white
+  }
+  
+  #error{
+      background-color: rgb(212, 105, 123);
+      padding: 5px;
+      border:solid black 2px;
+      display: none;
+  } 
+  #resultat{
+    background-color: green;
+    padding: 5px;
+    border:solid black 2px;
+    color: white; 
+    display: none;
+  }
+  
+  .display{
+    display: block !important;
+  }
+  
+  
+  
+  input[type="button"]{
+  
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+  
+  }
+  input[type="button"]:hover{
+  background-color: #e0c8c173;
+  }
+  
+  input[type="button"]:active{
+  background-color: blue;
+  }
