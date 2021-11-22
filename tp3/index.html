@@ -2,138 +2,126 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="formulaire.css">
-    <script src="js/form-validation.js"></script>
-    <script src="js/bootstrap.bundle.js"></script>
-   
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/formulaire.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/form-validation.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
 
-    <!-- CSS boostrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
-    <script src="js/bootstrap.min.js"></script>
-    <title>Document</title>
+  <title>Document</title>
 </head>
 
 <body>
-    <center>
-        <h1 style="color:rgb(223, 182, 170);">Saisie d'une fiche "Personne":</h1>
-    </center>
-    <div class="container">
-        <form id="formAW">
-            <div class="row">
+  <center>
+    <h1 style="color:rgb(223, 182, 170);">Saisie d'une fiche "Personne":</h1>
+  </center>
+  <div class="container">
+    <form id="formAW">
+      <div class="row">
 
-                <p>
-                    <div class="col">
-                        <label class="form-label" for="nom">Nom</label> :
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" name="nom" id="nom" placeholder="Ex : Lakhram" size="30"
-                            minlength="5" pattern="[a-zA-Z]+" maxlength="20" class="inputAW" />
-                    </div>
-                </p>
-            </div>
+        <p>
+          <div class="col">
+            <label class="form-label" for="nom">Nom</label> :
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" name="nom" id="nom" placeholder="Ex : Lakhram" size="30"
+              minlength="5" pattern="[a-zA-Z]+" maxlength="20" class="inputAW" />
+          </div>
+        </p>
+      </div>
 
-            <div class="row">
+      <div class="row">
 
-                <p>
-                    <div class="col">
+        <p>
+          <div class="col">
 
-                        <label class="form-label" for="prenom">Prénom</label> :
-                    </div>
-                    <div class="col">
+            <label class="form-label" for="prenom">Prénom</label> :
+          </div>
+          <div class="col">
 
-                        <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Ex : Shaïma"
-                            size="30" minlength="5" maxlength="20" class="inputAW" />
-                    </div>
+            <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Ex : Shaïma" size="30"
+              minlength="5" maxlength="20" class="inputAW" />
+          </div>
 
-                </p>
-            </div>
+        </p>
+      </div>
+      <div class="row">
 
-            <div class="row">
+        <p>
+          <div class="col">
 
-                <p>
-                    <div class="col">
+            <label for="date">Date de naissance</label> :
+          </div>
+          <div class="col">
 
-                        <label for="date">Date de naissance</label> :
-                    </div>
-                    <div class="col">
+            <input type="date" name="date" id="date" placeholer="JJ/MM/AAAA" class="form-control" />
+          </div>
+        </p>
+      </div>
 
-                        <input type="date" name="date" id="date" placeholer="JJ/MM/AAAA" class="form-control" />
-                    </div>
-                </p>
-            </div>
+      <div class="row">
+        <div class="col">
 
-            <div class="row">
-                <div class="col">
-
-                    <p> <label for="sexe" class="form-label">Sexe</label> :
-                    </p>
-                </div>
-                <div class="col">
-                    <select class="form-control" name="sexe" id="sexe">
-                        <option value="Homme">Homme</option>
-                        <option value="Femme">Femme</option>
-                        <option value="Autre">Autre</option>
-                    </select>
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>
-                        <label class="form-label" for="adresse">Adresse</label> :
-                </div>
-
-                <div class="col">
-                    <input type="text" name="adresse" id="adresse" size="30" minlength="5" maxlength="50"
-                        class="form-control" />
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>
-                        <label class="form-label" for="mail">Mail</label> :
-                </div>
-                <div class="col">
-                    <input type="email" name="mail" id="mail" placeholder="Ex : exemple@mail.fr" size="30" minlength="5"
-                        maxlength="30" class="form-control" />
-                    </p>
-                </div>
-            </div>
-            <br />
-            <button type="button" class="btn btn-light" value="envoyer" id="submit">Envoyer</button>
-
-        </form>
-
-    </div>
-    <div class="modal" tabindex="-1" role="dialog" id="myModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Informations saisies</h5>
-
-                </div>
-                <div class="modal-body">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" onclick="closeModal()" class="btn btn-secondary"
-                        data-dismiss="modal">Ok</button>
-                </div>
-            </div>
+          <p> <label for="sexe" class="form-label">Sexe</label> :
+          </p>
         </div>
-    </div>
-    <script>
-        function closeModal() {
-            $("#myModal").modal("hide")
+        <div class="col">
+          <select class="form-control" name="sexe" id="sexe">
+            <option value="Homme">Homme</option>
+            <option value="Femme">Femme</option>
+            <option value="Autre">Autre</option>
+          </select>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>
+            <label class="form-label" for="adresse">Adresse</label> :
+        </div>
+        <div class="col">
+          <input type="text" name="adresse" id="adresse" size="30" minlength="5" maxlength="50" class="form-control" />
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>
+            <label class="form-label" for="mail">Mail</label> :
+        </div>
+        <div class="col">
+          <input type="email" name="mail" id="mail" placeholder="Ex : exemple@mail.fr" size="30" minlength="5"
+            maxlength="30" class="form-control" />
+          </p>
+        </div>
+      </div>
+      <br />
+      <button type="button" class="btn btn-light" value="envoyer" id="submit">Envoyer</button>
 
-        }
-    </script>
+    </form>
+
+  </div>
+  <div class="modal" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="modal-title" class="modal-title">Informations saisies</h5>
+
+        </div>
+        <div id="modal-body" class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="btn-close" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  </script>
 </body>
 
 </html>
